@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社EMoshU</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/f714ef2d5d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <a href="./">
+        <img src="images/EMoshU_logo_m.png" alt="エモッシュ">
+      </a>
+    </div>
+    <div class="btn-wrapper">
+      <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+      </div>
+    </div>
+    <ul class="sp-menu">
+      <li><a href="#"><i class="fas fa-clipboard"></i>Mission</a></li>
+      <li><a href="#"><i class="fas fa-briefcase"></i>Services</a></li>
+      <li><a href="#"><i class="far fa-newspaper"></i>News</a></li>
+      <li><a href="#"><i class="fas fa-user-friends"></i>Our Team</a></li>
+      <li><a href="#"><i class="fas fa-handshake"></i>Recruit</a></li>
+      <li><a href="#"><i class="fas fa-laptop-house"></i>About Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Side Navigation -->
+  <div class="sidebar-menu">
+    <div class="inner__sidebar-menu">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-clipboard"></i>
+            </span>
+            <span class="list">Mission</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-briefcase"></i>
+            </span>
+            <span class="list">Services</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <i class="far fa-newspaper"></i>
+            </span>
+            <span class="list">News</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-user-friends"></i>
+            </span>
+            <span class="list">Our Team</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-handshake"></i>
+            </span>
+            <span class="list">Recruit</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-laptop-house"></i>
+            </span>
+            <span class="list">About Us</span>
+          </a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <div class="inner__hamburger">
+          <span class="arrow">
+            <i class="fas fa-angle-double-left"></i>
+            <i class="fas fa-angle-double-right" style="display: none;"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <!-- <div class="header">
+        <h1>Emotion × Mosh × United</h1>
+      </div> -->
+    </div>
+  </section>
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const spMenu = document.querySelector('.sp-menu');
+    const arrow = document.querySelector('.hamburger');
+    const sideMenu = document.querySelector('.sidebar-menu');
+    const container = document.querySelector('.container');
+
+    let menuOpen = false;
+    menuBtn.addEventListener('click', () => {
+      if(!menuOpen) {
+        menuBtn.classList.add('open');
+        spMenu.classList.add('open');
+        menuOpen = true;
+      } else {
+        menuBtn.classList.remove('open');
+        spMenu.classList.remove('open');
+        menuOpen = false;
+      }
+    });
+
+    let arrowActive = false;
+    arrow.addEventListener('click', () => {
+      if(!arrowActive) {
+        sideMenu.classList.add('active');
+        container.classList.add('active');
+        arrowActive = true;
+      } else {
+        sideMenu.classList.remove('active');
+        container.classList.remove('active');
+        arrowActive = false;
+      }
+    });
+  </script>
+</body>
+</html>
