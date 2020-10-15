@@ -10,6 +10,7 @@
   --footer-background: #E2E2E2;
   --point-color: #F0EFEE;
   --menu-color: #FFFFFF;
+  --border-color: #C4C9D4;
   --emoshu-color: #BA1B21;
 }
 
@@ -22,6 +23,7 @@
   --footer-background: #16181D;
   --point-color: #303030;
   --menu-color: #1C1C1C;
+  --border-color: #58627d;
   --emoshu-color: #BA1B21;
 }
 
@@ -62,13 +64,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   padding: 10rem 15rem 10rem 40rem;
   position: relative;
   transition: all 0.3s ease-out;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2rem;
 }
 
-.section-title {
-  width: 100%;
-}
-
-.section-title h4 {
+.section-title h4.section-index {
   font-size: 2rem;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: -1.5px;
@@ -84,6 +85,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .section-title h3 {
   font-size: 1.6rem;
+}
+
+.section-main {
+  margin-top: 4rem;
 }
 
 /* Top Navigation Bar */
@@ -384,6 +389,7 @@ nav ul.sp-menu li a:hover:before {
 .hero .section-wrapper {
   background-color: var(--main-background);
   height: 100vh;
+  display: block;
 }
 
 canvas.particles-js-canvas-el {
@@ -438,9 +444,71 @@ canvas.particles-js-canvas-el {
   background-color: var(--main-background);
 }
 
+.info {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  column-gap: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.info.last {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-title {
+  font-weight: bold;
+}
+
+.info-title, .info-text {
+  font-size: 1.6rem;
+  padding: 2.5rem 0;
+  color: var(--main-text);
+}
+
+.info-text p:not(:last-child) {
+  padding-bottom: 2rem;
+}
+
+.info-text p.first {
+  padding-bottom: 4rem;
+}
+
+.info-wrapper .map {
+  margin-top: 4rem;
+}
+
 /* Contact Section */
 .contact .section-wrapper {
   background-color: var(--secondary-background);
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info p {
+  font-size: 1.4rem;
+  margin-right: 2rem;
+}
+
+.contact-info a.btn {
+  width: 25rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1.6rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--menu-color);
+  transition: all .4s;
+}
+
+.contact-info a.btn:hover {
+  color: var(--hover-text);
+  background-color: var(--point-color);
+  box-shadow: 5px 5px 5px -1px var(--footer-background);
 }
 
 /* Footer */
@@ -538,5 +606,3 @@ canvas.particles-js-canvas-el {
     height: 4.5rem;
   }
 }
-
-/* Dark Mode */
