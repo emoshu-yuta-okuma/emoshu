@@ -11,6 +11,7 @@
   --point-color: #F0EFEE;
   --menu-color: #FFFFFF;
   --border-color: #C4C9D4;
+  --card-color: #ECEFF1;
   --emoshu-color: #BA1B21;
 }
 
@@ -24,6 +25,7 @@
   --point-color: #303030;
   --menu-color: #1C1C1C;
   --border-color: #58627d;
+  --card-color: #37474F;
   --emoshu-color: #BA1B21;
 }
 
@@ -432,6 +434,62 @@ canvas.particles-js-canvas-el {
 /* Our Team Section */
 .team .section-wrapper {
   background-color: var(--main-background);
+}
+
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 6rem;
+}
+
+.single-box {
+  background-color: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.header-area {
+  border-radius: 1rem 1rem 50% 0;
+  padding: 12rem 2rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.single-box .body-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.body-area h4 {
+  font-size: 1.4rem;
+  color: var(--hover-text);
+  margin-bottom: 0.5rem;
+}
+
+.body-area h3 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.body-area p.pro-text {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.header-area.profile-img01 {
+  background-image: url('../images/profile.png');
+}
+
+.header-area.profile-img02 {
+  background-image: url('../images/profile.png');
 }
 
 /* Recruit Section */
