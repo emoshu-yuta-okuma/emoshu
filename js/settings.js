@@ -1,6 +1,7 @@
 let body = document.body;
 let toggleBtn = document.querySelector('.toggle-btn');
 let themeSwitch = document.querySelector('.theme-switch');
+let missionImg = document.querySelector('.mission-img');
 let currentTheme = localStorage.getItem('currentTheme');
 const lightParticles = '#363C49';
 const darkParticles = '#F9F9F9';
@@ -9,6 +10,7 @@ let lightTheme = true;
 if (currentTheme) {
   body.classList.add('dark-theme');
   themeSwitch.classList.add('dark-theme');
+  missionImg.classList.add('dark-theme');
 
   lightTheme = false;
 }
@@ -16,6 +18,7 @@ if (currentTheme) {
 toggleBtn.addEventListener('click', function() {
   body.classList.toggle('dark-theme');
   themeSwitch.classList.toggle('dark-theme');
+  missionImg.classList.toggle('dark-theme');
 
   lightTheme = !lightTheme;
   

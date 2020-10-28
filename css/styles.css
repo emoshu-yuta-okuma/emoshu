@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap'); */
 
 /* Variables - Colors */
 :root {
@@ -12,6 +13,7 @@
   --menu-color: #FFFFFF;
   --border-color: #C4C9D4;
   --card-color: #ECEFF1;
+  --svg-color: #E2E2E2;
   --emoshu-color: #BA1B21;
 }
 
@@ -26,6 +28,7 @@
   --menu-color: #1C1C1C;
   --border-color: #58627d;
   --card-color: #37474F;
+  --svg-color: #2B303B;
   --emoshu-color: #BA1B21;
 }
 
@@ -43,7 +46,7 @@ html {
 }
 
 body {
-  font-family: 'YuGothic', sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
   width: 100%;
   height: 100%;
 }
@@ -91,6 +94,24 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .section-main {
   margin-top: 4rem;
+}
+
+a.btn {
+  width: 25rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1.6rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  transition: all .4s;
+  border: 1px solid var(--border-color);
+  background-color: var(--menu-color);
+}
+
+a.btn:hover {
+  box-shadow: 5px 5px 5px -1px var(--footer-background);
+  color: var(--hover-text);
+  background-color: var(--point-color);
 }
 
 /* Top Navigation Bar */
@@ -413,6 +434,7 @@ canvas.particles-js-canvas-el {
 .header h1 {
   color: #BA1B21;
   font-size: 6rem;
+  font-family: 'Ubuntu', sans-serif;
   text-align: center;
 }
 
@@ -421,14 +443,103 @@ canvas.particles-js-canvas-el {
   background-color: var(--secondary-background);
 }
 
+.mission-value h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.mission-value h1 {
+  font-size: 3rem;
+}
+
+.value-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  column-gap: 2rem;
+  margin-top: 10rem;
+}
+
+.value-text p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.value-text p i {
+  color: var(--emoshu-color);
+  margin-right: 1.5rem;
+}
+
+.mission-img {
+  padding-top: 1.5rem;
+}
+
+.mission-img img {
+  width: 100%;
+}
+
+.mission-img a {
+  float: right;
+  color: var(--secondary-background);
+}
+
+.mission-img img.mission-dark {
+  display: none;
+}
+
+.mission-img.dark-theme img.mission-light {
+  display: none;
+}
+
+.mission-img.dark-theme img.mission-dark {
+  display: block;
+}
+
 /* Services Section */
 .services .section-wrapper {
   background-color: var(--main-background);
 }
 
+.service h4 {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
 /* News Section */
 .news .section-wrapper {
   background-color: var(--secondary-background);
+}
+
+.news-wrapper {
+  width: 100%;
+}
+
+.news-heading {
+  padding: 2.5rem 0 2.5rem 5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.news-heading:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.news-heading span {
+  font-size: 1.1rem;
+  color: var(--hover-text);
+}
+
+.news-heading p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.news-heading p a {
+  text-decoration: underline;
+  transition: all .4s;
+}
+
+.news-heading p a:hover {
+  color: var(--hover-text);
 }
 
 /* Our Team Section */
@@ -439,7 +550,7 @@ canvas.particles-js-canvas-el {
 .members {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 3rem;
+  column-gap: 4rem;
   row-gap: 6rem;
 }
 
@@ -455,7 +566,7 @@ canvas.particles-js-canvas-el {
 
 .header-area {
   border-radius: 1rem 1rem 50% 0;
-  padding: 12rem 2rem;
+  padding: 14rem 2rem;
   width: 100%;
   background-size: cover;
   background-position: center center;
@@ -465,7 +576,7 @@ canvas.particles-js-canvas-el {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.5rem;
+  padding: 3rem 2rem 2.5rem;
 }
 
 .body-area h4 {
@@ -479,22 +590,270 @@ canvas.particles-js-canvas-el {
   margin-bottom: 1.8rem;
 }
 
+.body-area h3 span {
+  margin-left: 1.2rem;
+  font-size: 1.2rem;
+}
+
 .body-area p.pro-text {
   font-size: 1.4rem;
   line-height: 1.8rem;
 }
 
 .header-area.profile-img01 {
-  background-image: url('../images/profile.png');
+  background-image: url('../images/junichi.jpg');
 }
 
 .header-area.profile-img02 {
+  background-image: url('../images/shotaro.jpg');
+}
+
+.header-area.profile-img03 {
+  background-image: url('../images/ryogo.jpg');
+}
+
+.header-area.profile-img04 {
+  background-image: url('../images/yuta.jpg');
+}
+
+.header-area.profile-img05 {
+  background-image: url('../images/wataru.jpg');
+}
+
+.header-area.profile-img06 {
   background-image: url('../images/profile.png');
+}
+
+.emoshu-shugo {
+  margin-top: 8rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.emoshu-shugo .img-container {
+  background-color: var(--card-color);
+  width: 70%;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  padding-bottom: 2rem;
+}
+
+.emoshu-shugo img {
+  width: 100%;
+  padding: 2rem;
+}
+
+.emoshu-shugo p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
 }
 
 /* Recruit Section */
 .recruit .section-wrapper {
   background-color: var(--secondary-background);
+}
+
+.recruit-title {
+  width: 16rem;
+  margin: 0 auto 5rem;
+  position: relative;
+}
+
+.emoshu-svg {
+  fill: var(--svg-color);
+  width: 6rem;
+  vertical-align: middle;
+  transition: fill .5s linear;
+}
+
+.recruit-title h2 {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 45%;
+  left: 5.2rem;
+}
+
+/* Recruit - 働く環境 */
+.work-env {
+  width: 90%;
+  margin: 0 auto 8rem;
+}
+
+.work-env-text {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: var(--main-text);
+  border-top: 1px solid var(--border-color);
+  padding: 2.5rem 0 2.5rem 6rem;
+}
+
+.work-env-text:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Recruit - 募集職種 */
+.attitude {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+.attitude h3 {
+  font-size: 1.6rem;
+}
+
+.attitude p {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+.job-card {
+  position: relative;
+  height: 85rem;
+  width: 100%;
+  margin: auto;
+  border-radius: 2.5rem;
+  background-color: var(--menu-color);
+
+}
+
+.inner-part {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.job-content {
+  width: 100%;
+  margin-left: 50px;
+  opacity: 0;
+  transition: .6s;
+}
+
+#tap-1:checked ~ .inner-part .job-content-1,
+#tap-2:checked ~ .inner-part .job-content-2,
+#tap-3:checked ~ .inner-part .job-content-3,
+#tap-4:checked ~ .inner-part .job-content-4 {
+  opacity: 1;
+  margin-left: 0px;
+  z-index: 100;
+  transition-delay: .3s;
+}
+
+.job-content h1 {
+  color: var(--main-text);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.8rem;
+}
+
+.job-content h3 {
+  color: var(--main-text);
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 1rem;
+  margin-bottom: 5rem;
+}
+
+.job-description .description-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.job-description .description-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.job-description strong {
+  font-size: 1.4rem;
+  color: var(--main-text);
+}
+
+.job-description p {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: var(--main-text);
+}
+
+p.inexperienced {
+  padding-top: 4rem;
+}
+
+.sliders {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 50;
+}
+
+.sliders .tap {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--main-text);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0 3rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--menu-color);
+  border-radius: 2.5rem;
+  border: 2px solid var(--emoshu-color);
+  cursor: pointer;
+  transition: all .6s;
+}
+
+.sliders .tap:hover {
+  background-color: var(--emoshu-color);
+  color: #FFFFFF;
+}
+
+#tap-1:checked ~ .sliders .tap-1,
+#tap-2:checked ~ .sliders .tap-2,
+#tap-3:checked ~ .sliders .tap-3,
+#tap-4:checked ~ .sliders .tap-4 {
+  background-color: var(--emoshu-color);
+  color: #FFFFFF;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+.application.first {
+  margin-top: 12rem;
+  margin-bottom: 8rem;
+}
+
+.application h3 {
+  font-size: 1.6rem;
+}
+
+.application-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.application-text p {
+  font-size: 1.4rem;
+  width: 65%;
+  margin-top: 1.5rem;
+  margin-right: 3rem;
+  line-height: 2.2rem;
 }
 
 /* About Us Section */
@@ -548,25 +907,9 @@ canvas.particles-js-canvas-el {
 
 .contact-info p {
   font-size: 1.4rem;
-  margin-right: 2rem;
-}
-
-.contact-info a.btn {
-  width: 25rem;
-  font-size: 1.6rem;
-  font-weight: bold;
-  padding: 1.6rem 0;
-  text-align: center;
-  border-radius: 1rem;
-  border: 1px solid var(--border-color);
-  background-color: var(--menu-color);
-  transition: all .4s;
-}
-
-.contact-info a.btn:hover {
-  color: var(--hover-text);
-  background-color: var(--point-color);
-  box-shadow: 5px 5px 5px -1px var(--footer-background);
+  width: 65%;
+  margin-right: 3rem;
+  line-height: 2.2rem;
 }
 
 /* Footer */
@@ -588,6 +931,7 @@ canvas.particles-js-canvas-el {
 
 .footer small {
   color: var(--main-text);
+  font-size: 1rem;
 }
 
 /* Page Top */
@@ -606,61 +950,4 @@ canvas.particles-js-canvas-el {
 .page-top-container a.page-top img {
   width: 5rem;
   height: 5rem;
-}
-
-/* Media Query */
-@media screen and (max-width: 900px) {
-
-  /* Reusable */
-  .section-wrapper {
-    padding: 5rem 2.5rem;
-  }
-  
-  .container.active .section-wrapper {
-    padding-left: 2.5rem;
-  }
-  
-  /* Top Navigation Bar */
-  nav ul.sp-menu {
-    display: block;
-  }
-  
-  .btn-wrapper {
-    display: flex;
-  }
-  
-  /* Side Navigation */
-  .sidebar-menu {
-    display: none;
-  }
-
-  /* Theme Toggle Button */
-  .toggle-btn {
-    right: 2rem;
-    top: 9rem;
-  }
-  
-  /* Content */
-  .container, .container.active {
-    width: 100%;
-  }
-  
-  /* Page Top */
-  .page-top-container a.page-top {
-    right: 2rem;
-  }
-
-  /* Footer */
-  .footer .section-wrapper {
-    padding: 3rem 10rem 3rem 2.5rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  
-  /* Page Top */
-  .page-top-container a.page-top img {
-    width: 4.5rem;
-    height: 4.5rem;
-  }
 }
