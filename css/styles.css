@@ -56,6 +56,10 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: var(--main-text);
 }
 
+p, strong {
+  font-size: 1.4rem;
+}
+
 /* Reusable */
 .container {
   width: 100%;
@@ -65,7 +69,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 .section-wrapper {
   width: 100%;
   height: 100%;
-  max-height: 100%;
+  /* max-height: 100%; */
   padding: 10rem 15rem 10rem 40rem;
   position: relative;
   transition: all 0.3s ease-out;
@@ -448,15 +452,18 @@ canvas.particles-js-canvas-el {
   margin-bottom: 2rem;
 }
 
+.mission-value h2.value {
+  margin-top: 10rem;
+}
+
 .mission-value h1 {
   font-size: 3rem;
 }
 
 .value-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  column-gap: 2rem;
-  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .value-text p {
@@ -467,11 +474,11 @@ canvas.particles-js-canvas-el {
 
 .value-text p i {
   color: var(--emoshu-color);
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 
 .mission-img {
-  padding-top: 1.5rem;
+  width: 50%;
 }
 
 .mission-img img {
@@ -529,7 +536,6 @@ canvas.particles-js-canvas-el {
 }
 
 .news-heading p {
-  font-size: 1.4rem;
   margin-top: 1rem;
 }
 
@@ -596,7 +602,6 @@ canvas.particles-js-canvas-el {
 }
 
 .body-area p.pro-text {
-  font-size: 1.4rem;
   line-height: 1.8rem;
 }
 
@@ -626,8 +631,8 @@ canvas.particles-js-canvas-el {
 
 .emoshu-shugo {
   margin-top: 8rem;
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   display: flex;
   justify-content: center;
 }
@@ -707,7 +712,6 @@ canvas.particles-js-canvas-el {
 }
 
 .attitude p {
-  font-size: 1.4rem;
   line-height: 2.5rem;
 }
 
@@ -776,43 +780,45 @@ canvas.particles-js-canvas-el {
 }
 
 .job-description strong {
-  font-size: 1.4rem;
   color: var(--main-text);
 }
 
 .job-description p {
-  font-size: 1.4rem;
   line-height: 2.5rem;
   color: var(--main-text);
-}
-
-p.inexperienced {
-  padding-top: 4rem;
 }
 
 .sliders {
   position: absolute;
   bottom: 3rem;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
   width: 100%;
   z-index: 50;
 }
 
 .sliders .tap {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: var(--main-text);
   display: flex;
   justify-content: center;
   position: relative;
-  margin: 0 3rem;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 0;
   background-color: var(--menu-color);
   border-radius: 2.5rem;
   border: 2px solid var(--emoshu-color);
   cursor: pointer;
   transition: all .6s;
+}
+
+.sliders .tap:first-child {
+  margin-left: 1rem;
+}
+
+.sliders .tap:last-child {
+  margin-right: 1rem;
 }
 
 .sliders .tap:hover {
@@ -849,7 +855,6 @@ input[type="checkbox"] {
 }
 
 .application-text p {
-  font-size: 1.4rem;
   width: 65%;
   margin-top: 1.5rem;
   margin-right: 3rem;
@@ -906,7 +911,6 @@ input[type="checkbox"] {
 }
 
 .contact-info p {
-  font-size: 1.4rem;
   width: 65%;
   margin-right: 3rem;
   line-height: 2.2rem;
@@ -919,6 +923,10 @@ input[type="checkbox"] {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.container.active .footer .footer-wrapper {
+  padding-left: 25rem;
 }
 
 .footer .logo {
