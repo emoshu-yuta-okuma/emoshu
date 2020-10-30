@@ -156,6 +156,9 @@ nav ul.sp-menu {
   border-bottom-right-radius: 100%;
   overflow: scroll;
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 10;
 }
 
@@ -166,8 +169,11 @@ nav ul.sp-menu.open {
 
 nav ul.sp-menu li {
   display: block;
-  margin: 5rem 0;
-  line-height: 3rem;
+  margin: 3rem 0;
+}
+
+nav ul.sp-menu li:first-child {
+  margin-top: 0;
 }
 
 nav ul.sp-menu li a {
@@ -175,7 +181,7 @@ nav ul.sp-menu li a {
   font-size: 2rem;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1px;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 
 nav ul.sp-menu li a i {

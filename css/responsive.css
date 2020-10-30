@@ -142,6 +142,15 @@
 
 @media screen and (max-width: 1300px) {
 
+  /* Our Team Section */
+  .container .members {
+    grid-template-columns: 1fr;
+  }
+
+  .container.active .members {
+    grid-template-columns: 1fr 1fr;
+  }
+
   /* Recruit Section */
   /* Recruit - 募集職種 */
   .application-text {
@@ -178,15 +187,6 @@
   /* Mission Section */
   .mission-img {
     width: 80%;
-  }
-
-  /* Our Team Section */
-  .container .members {
-    grid-template-columns: 1fr;
-  }
-
-  .container.active .members {
-    grid-template-columns: 1fr 1fr;
   }
 
   /* Recruit Section */
@@ -326,7 +326,7 @@
   
   /* Top Navigation Bar */
   nav ul.sp-menu {
-    display: block;
+    display: flex;
   }
   
   .btn-wrapper {
@@ -528,6 +528,14 @@
     width: 18rem;
   }
 
+  nav ul.sp-menu {
+    padding-top: 8rem;
+  }
+
+  nav ul.sp-menu li a {
+    font-size: 1.8rem;
+  }
+
   /* Animated Toggle Icon */
   .btn-wrapper {
     width: calc(100% - 18rem);
@@ -703,6 +711,14 @@
   /* Our Team Section */
   .single-box {
     margin: 0 10rem; 
+  }
+
+  .emoshu-shugo .img-container {
+    padding-bottom: 1.5rem;
+  }
+  
+  .emoshu-shugo img {
+    padding: 1.5rem;
   }
 
   /* Recruit Section */
@@ -986,11 +1002,16 @@
 
   /* Our Team Section */
   .single-box {
-    margin: 0;
+    margin: 0 1rem;
   }
 
   .emoshu-shugo .img-container {
     width: 95%;
+    padding-bottom: 1.2rem;
+  }
+  
+  .emoshu-shugo img {
+    padding: 1.2rem;
   }
 
   /* Recruit Section */
@@ -1003,15 +1024,6 @@
     font-size: 1.3rem;
     line-height: 2.2rem;
     padding: 2.2rem 1rem;
-  }
-}
-
-@media screen and (max-width: 389px) {
-  
-  /* Recruit Section */
-  /* Recruit - 募集職種 */
-  .job-card, .container.active .job-card {
-    /* height: 115rem; */
   }
 }
 
