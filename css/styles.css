@@ -448,6 +448,10 @@ canvas.particles-js-canvas-el {
   text-align: center;
 }
 
+.header h1.multiply {
+  margin: 0 1.5rem;
+}
+
 /* Mission Section */
 .mission .section-wrapper {
   background-color: var(--secondary-background);
@@ -543,6 +547,7 @@ canvas.particles-js-canvas-el {
 
 .news-heading p {
   margin-top: 1rem;
+  line-height: 2.2rem;
 }
 
 .news-heading p a {
@@ -620,19 +625,23 @@ canvas.particles-js-canvas-el {
 }
 
 .header-area.profile-img03 {
-  background-image: url('../images/ryogo.jpg');
+  background-image: url('../images/masaki.jpg');
 }
 
 .header-area.profile-img04 {
-  background-image: url('../images/yuta.jpg');
+  background-image: url('../images/ryogo.jpg');
 }
 
 .header-area.profile-img05 {
-  background-image: url('../images/wataru.jpg');
+  background-image: url('../images/yuta.jpg');
 }
 
 .header-area.profile-img06 {
-  background-image: url('../images/profile.png');
+  background-image: url('../images/wataru.jpg');
+}
+
+.header-area.profile-img07 {
+  background-image: url('../images/tarek.jpg');
 }
 
 .emoshu-shugo {
@@ -751,7 +760,8 @@ canvas.particles-js-canvas-el {
 #tap-1:checked ~ .inner-part .job-content-1,
 #tap-2:checked ~ .inner-part .job-content-2,
 #tap-3:checked ~ .inner-part .job-content-3,
-#tap-4:checked ~ .inner-part .job-content-4 {
+#tap-4:checked ~ .inner-part .job-content-4,
+#tap-5:checked ~ .inner-part .job-content-5 {
   opacity: 1;
   margin-left: 0px;
   z-index: 100;
@@ -794,11 +804,20 @@ canvas.particles-js-canvas-el {
   color: var(--main-text);
 }
 
+.job-content-5 .description-wrapper:last-child p {
+  padding-bottom: 1rem;
+}
+
+.job-content-5 .description-wrapper:last-child p:last-child {
+  padding-bottom: 0;
+}
+
 .sliders {
   position: absolute;
   bottom: 3rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
   column-gap: 2rem;
   width: 100%;
   z-index: 50;
@@ -807,6 +826,7 @@ canvas.particles-js-canvas-el {
 .sliders .tap {
   font-size: 1.6rem;
   font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
   color: var(--main-text);
   display: flex;
   justify-content: center;
@@ -835,7 +855,8 @@ canvas.particles-js-canvas-el {
 #tap-1:checked ~ .sliders .tap-1,
 #tap-2:checked ~ .sliders .tap-2,
 #tap-3:checked ~ .sliders .tap-3,
-#tap-4:checked ~ .sliders .tap-4 {
+#tap-4:checked ~ .sliders .tap-4,
+#tap-5:checked ~ .sliders .tap-5 {
   background-color: var(--emoshu-color);
   color: #FFFFFF;
 }

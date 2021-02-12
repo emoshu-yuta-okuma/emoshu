@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Sp-Menu
   $('.menu-btn').click(function() {
     $('.menu-btn, .sp-menu').toggleClass('open');
