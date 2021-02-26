@@ -691,6 +691,10 @@ span.scroll::after {
   background-image: url('../images/tarek.jpg');
 }
 
+.header-area.profile-img08 {
+  background-image: url('../images/kou.jpg');
+}
+
 .emoshu-shugo {
   margin-top: 8rem;
   width: inherit;
